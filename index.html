@@ -4,10 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dayshift: run your service business, start to finish</title>
+<meta name="author" content="LIT America">
+<meta property="og:site_name" content="Dayshift by LIT America">
 <meta name="description" content="Job board, crew locations, booking requests and bookkeeping for cleaning, lawn care, handyman and pet-care businesses. Every business is reviewed by a real person before going live.">
 <meta property="og:title" content="Dayshift: run your service business, start to finish">
 <meta property="og:description" content="Job board, crew locations, booking requests and bookkeeping for the businesses that come to you.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1736433622548-4adbbc1c2cf2?w=1200&amp;q=70&amp;auto=format&amp;fit=crop">
+<meta property="og:image" content="https://images.unsplash.com/photo-1734303023491-db8037a21f09?w=1200&amp;q=70&amp;auto=format&amp;fit=crop">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -31,6 +33,7 @@ img,svg{display:block;max-width:100%}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
 .brand{font-family:var(--display);font-weight:700;font-size:21px;display:flex;align-items:center;gap:8px}
 .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--amber)}
+.brand-by{font-family:var(--body);font-weight:600;font-size:13px;color:var(--muted);margin-left:8px;padding-left:12px;border-left:1px solid var(--line);white-space:nowrap}
 .nav-links{display:flex;gap:30px;font-weight:600;font-size:15px}
 .nav-links a{text-decoration:none;color:var(--muted)}
 .nav-links a:hover{color:var(--ink)}
@@ -81,16 +84,35 @@ img,svg{display:block;max-width:100%}
 .hero-ctas{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
 .hero-note{margin-top:16px;font-size:14px;color:var(--muted)}
 .hero-visual{position:relative;height:520px}
-.hero-sun{position:absolute;top:-30px;right:15%;width:72px;height:72px;border-radius:50%;background:radial-gradient(circle at 50% 62%,#F3B04E,#D98E2B);box-shadow:0 0 0 12px rgba(217,142,43,.13);z-index:0;pointer-events:none}
-.hero-photo{position:absolute;top:0;right:0;width:82%;height:430px;border-radius:26px;overflow:hidden;background:var(--dawn-soft);box-shadow:0 30px 60px -30px rgba(28,36,48,.5);z-index:1}
-.hero-photo img{width:100%;height:100%;object-fit:cover}
-.phone{position:absolute;left:0;bottom:0;width:240px;height:384px;background:var(--a-bg,#F3F7F5);border:7px solid var(--ink);border-radius:34px;overflow:hidden;box-shadow:0 28px 50px -18px rgba(28,36,48,.6);z-index:3}
+.hero-sun{position:absolute;top:-30px;left:32%;width:72px;height:72px;border-radius:50%;background:radial-gradient(circle at 50% 62%,#F3B04E,#D98E2B);box-shadow:0 0 0 12px rgba(217,142,43,.13);z-index:0;pointer-events:none}
+.hero-panel{position:absolute;top:0;left:0;width:90%;height:432px;border-radius:26px;background:radial-gradient(120% 55% at 50% 100%,rgba(217,142,43,.30),rgba(217,142,43,0) 70%),linear-gradient(170deg,#DCE7EF 0%,#FBEED9 55%,#F4DCCF 100%);box-shadow:0 30px 60px -34px rgba(28,36,48,.45);z-index:1}
+.hero-window{position:absolute;top:46px;left:4%;width:64%;background:var(--a-bg);border-radius:14px;box-shadow:0 30px 56px -22px rgba(28,36,48,.55);border:1px solid rgba(28,36,48,.1);overflow:hidden;z-index:2}
+.hw-bar{display:flex;align-items:center;gap:5px;padding:9px 12px;background:#E9EFEC;border-bottom:1px solid var(--a-line)}
+.hw-bar i{width:8px;height:8px;border-radius:50%;background:#CBD8D3;display:block}
+.hw-bar span{margin-left:8px;font-size:10.5px;color:var(--a-muted);font-weight:700}
+.hw-title{display:flex;align-items:center;gap:6px;padding:11px 12px 7px;font-family:var(--display);font-weight:700;font-size:13px}
+.hw-title .sp{width:9px;height:9px;background:var(--a-lemon);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+.hw-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:0 12px 9px}
+.hw-kpis .kpi{padding:7px 9px}
+.hw-kpis .kpi span{font-size:10px}
+.hw-kpis .kpi b{font-size:15px}
+.hw-kpis .kpi b small{font-size:10px;color:var(--a-muted);font-family:var(--body);font-weight:700}
+.hw-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:8px;padding:0 12px 12px}
+.hw-list{display:grid;gap:6px;align-content:start}
+.hw-row{display:flex;gap:8px;align-items:flex-start;background:#fff;border:1px solid var(--a-line);border-radius:9px;padding:7px 9px}
+.hw-row i{width:8px;height:8px;border-radius:2px;margin-top:4px;flex:none}
+.hw-row b{display:block;font-family:var(--display);font-size:11.5px;font-weight:600;line-height:1.2}
+.hw-row span{font-size:10px;color:var(--a-muted)}
+.hw-map{width:100%;height:158px;border-radius:9px;display:block}
+.phone{position:absolute;right:0;bottom:0;width:42%;min-width:176px;max-width:220px;height:376px;background:#F3F7F5;border:7px solid var(--ink);border-radius:34px;overflow:hidden;box-shadow:0 28px 50px -18px rgba(28,36,48,.6);z-index:3}
 .phone::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:64px;height:15px;background:var(--ink);border-radius:0 0 12px 12px;z-index:5}
 .phone::after{content:"";position:absolute;left:0;right:0;bottom:0;height:56px;background:linear-gradient(rgba(243,247,245,0),#F3F7F5);z-index:4;pointer-events:none}
 .phone .app-top{padding-top:24px}
+.ph-banner{display:flex;gap:8px;align-items:flex-start;background:var(--a-soft);border-radius:10px;margin:0 12px 10px;padding:9px 10px;font-size:11px;line-height:1.35}
+.ph-banner .pulse{margin-top:3px}
 .chip{position:absolute;background:#fff;border-radius:999px;padding:9px 15px;font-weight:600;font-size:13.5px;box-shadow:0 14px 30px -14px rgba(28,36,48,.55);display:flex;gap:9px;align-items:center;z-index:4;white-space:nowrap}
-.chip-live{top:22px;right:22px}
-.chip-new{right:22px;bottom:96px}
+.chip-live{top:10px;right:0}
+.chip-new{left:-6px;bottom:84px}
 .chip b{font-weight:700}
 .pulse{width:10px;height:10px;border-radius:50%;background:#2F8A4E;box-shadow:0 0 0 0 rgba(47,138,78,.55);animation:pulse 2s infinite;flex:none}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,138,78,.55)}70%{box-shadow:0 0 0 10px rgba(47,138,78,0)}100%{box-shadow:0 0 0 0 rgba(47,138,78,0)}}
@@ -185,11 +207,17 @@ section{padding:84px 0}
 footer{border-top:1px solid var(--line);padding:46px 0;margin-top:20px}
 .foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .foot-row .brand{font-size:17px}
-footer .fine{color:var(--muted);font-size:14px}
+footer .fine{color:var(--muted);font-size:14px;max-width:44ch}
+.foot-by{margin-top:10px;color:var(--muted);font-size:14.5px;max-width:46ch;line-height:1.5}
+.foot-by b{color:var(--ink)}
 
 :focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pulse{animation:none}.tile img{transition:none}}
 
+@media (min-width:941px) and (max-width:1100px){
+  .hw-map{display:none}
+  .hw-grid{grid-template-columns:1fr}
+}
 @media (max-width:940px){
   .nav-links{display:none}
   .hero-grid{grid-template-columns:1fr}
@@ -206,14 +234,19 @@ footer .fine{color:var(--muted);font-size:14px}
   .pricing-band{padding:42px 28px}
 }
 @media (max-width:560px){
+  .brand-by{display:none}
   .wrap{padding:0 20px}
-  .hero-visual{height:430px}
-  .hero-photo{height:350px}
-  .phone{width:196px;height:310px;border-width:6px}
+  .hero-visual{height:420px}
+  .hero-panel{height:340px;width:94%}
+  .hero-window{top:34px;left:3%;width:72%}
+  .hw-kpis,.hw-map{display:none}
+  .hw-grid{grid-template-columns:1fr}
+  .phone{width:168px;min-width:0;height:290px;border-width:6px}
   .phone .app-top{padding-top:22px}
+  .phone .hide-xs{display:none}
   .chip{font-size:12px;padding:7px 11px}
-  .chip-live{top:14px;right:12px}
-  .chip-new{right:10px;bottom:80px}
+  .chip-live{top:4px;right:0}
+  .chip-new{left:0;bottom:70px}
   .fvisual{padding:20px}
   .mb-grid{grid-template-columns:1fr 1fr}
   .mb-grid .hide-sm{display:none}
@@ -226,7 +259,7 @@ footer .fine{color:var(--muted);font-size:14px}
 <body>
 
 <header class="wrap nav">
-  <div class="brand"><span class="dot"></span>Dayshift</div>
+  <div class="brand"><span class="dot"></span>Dayshift<span class="brand-by">by LIT America</span></div>
   <nav class="nav-links">
     <a href="#features">Features</a>
     <a href="#how">How it works</a>
@@ -255,31 +288,56 @@ footer .fine{color:var(--muted);font-size:14px}
 
     <div class="hero-visual">
       <div class="hero-sun" aria-hidden="true"></div>
+      <div class="hero-panel" aria-hidden="true"></div>
 
-      <div class="hero-photo">
-        <img src="https://images.unsplash.com/photo-1736433622548-4adbbc1c2cf2?w=1100&amp;q=72&amp;auto=format&amp;fit=crop" alt="Hands scrubbing a kitchen sink with a sponge" fetchpriority="high" decoding="async">
+      <div class="hero-window app" role="img" aria-label="The Dayshift owner dashboard on a computer: today's jobs, who is on shift, a crew map and the day's schedule">
+        <div class="hw-bar"><i></i><i></i><i></i><span>Dayshift</span></div>
+        <div class="hw-title"><span class="sp"></span>Greenline Lawn &amp; Home</div>
+        <div class="hw-kpis">
+          <div class="kpi"><span>Today's jobs</span><b>6</b></div>
+          <div class="kpi"><span>On shift</span><b>3<small> of 4</small></b></div>
+          <div class="kpi"><span>New requests</span><b>2</b></div>
+        </div>
+        <div class="hw-grid">
+          <div class="hw-list">
+            <div class="hw-row"><i style="background:var(--a-lemon)"></i><div><b>Maple St duplex</b><span>9:00 AM · Lawn care</span></div></div>
+            <div class="hw-row"><i style="background:var(--a-sky)"></i><div><b>Oak Ridge Dental</b><span>1:00 PM · Cleaning</span></div></div>
+            <div class="hw-row"><i style="background:var(--a-sky)"></i><div><b>Brooks rental</b><span>Thu · Handyman</span></div></div>
+          </div>
+          <svg class="hw-map" viewBox="0 0 200 158" preserveAspectRatio="xMidYMid slice">
+            <rect width="200" height="158" fill="#E9F0E7"/>
+            <rect x="128" y="12" width="60" height="44" rx="10" fill="#D3E5CC"/>
+            <path d="M0 118 C 40 98, 80 134, 120 112 S 180 98, 200 114 L 200 158 L 0 158 Z" fill="#D3E5F0"/>
+            <g stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none"><path d="M-6 54 L 206 32"/><path d="M60 -6 L 76 164"/><path d="M128 -6 L 116 164"/><path d="M-6 92 L 206 86" stroke-width="5"/></g>
+            <circle cx="62" cy="46" r="17" fill="#1F7A69" opacity=".16"/>
+            <circle cx="62" cy="46" r="11" fill="#1F7A69" stroke="#fff" stroke-width="2.5"/>
+            <text x="62" y="50" text-anchor="middle" font-family="Roboto Slab, serif" font-weight="700" font-size="9" fill="#fff">ML</text>
+            <circle cx="104" cy="94" r="11" fill="#C0842A" stroke="#fff" stroke-width="2.5"/>
+            <text x="104" y="98" text-anchor="middle" font-family="Roboto Slab, serif" font-weight="700" font-size="9" fill="#fff">JP</text>
+            <circle cx="126" cy="40" r="11" fill="#3E7FB8" stroke="#fff" stroke-width="2.5"/>
+            <text x="126" y="44" text-anchor="middle" font-family="Roboto Slab, serif" font-weight="700" font-size="9" fill="#fff">TG</text>
+          </svg>
+        </div>
       </div>
 
       <div class="chip chip-live" aria-hidden="true"><span class="pulse"></span><span><b>Maria</b> is on shift</span></div>
       <div class="chip chip-new" aria-hidden="true"><span class="badge-dot"></span><span>New request · <b>Tue 9:00 AM</b></span></div>
 
-      <div class="phone app" role="img" aria-label="The Dayshift job board on a phone, showing a new lawn-care job and an assigned cleaning job">
+      <div class="phone app" role="img" aria-label="The crew member's view on a phone: signed in, on shift and sharing location, with the day's first job ready to start">
         <div class="app-top"><span class="sp"></span>Greenline Lawn &amp; Home</div>
-        <div class="app-tabs"><span>Requests</span><span class="on">Job board</span><span>Team</span></div>
-        <div class="app-colh"><i style="background:var(--a-lemon)"></i>New jobs<em>2</em></div>
-        <div class="app-card">
-          <small>Lawn care</small>
-          <h4>Maple Street duplex</h4>
-          <div class="addr">214 Maple St</div>
-          <div class="meta"><span>Tomorrow, 9:00 AM</span><b>$85.00</b></div>
-          <div class="app-sel"><span>Unassigned</span><span>⌄</span></div>
-        </div>
-        <div class="app-colh"><i style="background:var(--a-sky)"></i>Assigned<em>1</em></div>
+        <div class="app-sub" style="padding-bottom:7px">Signed in as <b style="color:var(--a-ink)">Maria Lopez</b></div>
+        <div class="ph-banner"><span class="pulse"></span><span>You're on shift and sharing your location with the office.</span></div>
+        <div class="app-colh"><i style="background:var(--a-sky)"></i>Today<em>2</em></div>
         <div class="app-card">
           <small>Deep cleaning</small>
           <h4>Oak Ridge Dental</h4>
           <div class="meta"><span>Today, 1:00 PM</span><b>$240.00</b></div>
-          <div class="app-row"><span class="avatar" style="background:#8A5BB5">ML</span><span>Maria L.</span></div>
+          <span class="app-btn p">Start job</span>
+        </div>
+        <div class="app-card hide-xs">
+          <small>Lawn care</small>
+          <h4>Maple Street duplex</h4>
+          <div class="meta"><span>Tomorrow, 9:00 AM</span><b>$85.00</b></div>
         </div>
       </div>
     </div>
@@ -574,8 +632,11 @@ footer .fine{color:var(--muted);font-size:14px}
 
 <footer>
   <div class="wrap foot-row">
-    <div class="brand"><span class="dot"></span>Dayshift</div>
-    <p class="fine">© 2026 Dayshift. Built for the businesses that keep the lights on. Photos from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</p>
+    <div>
+      <div class="brand"><span class="dot"></span>Dayshift</div>
+      <p class="foot-by"><b>A product of LIT America.</b> Websites and software for local small businesses.</p>
+    </div>
+    <p class="fine">© 2026 LIT America LLC. Built for the businesses that keep the lights on. Photos from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</p>
   </div>
 </footer>
 
